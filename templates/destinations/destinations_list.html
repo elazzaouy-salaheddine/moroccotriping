@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3) 101.02%), 
+    url({% static 'assets/img/innerpage/inner-banner-bg.png' %});">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <div class="banner-content">
+            <h1>الوجهات السياحية</h1>
+            <ul class="breadcrumb-list">
+              <li>
+                <a href="{% url 'home' %}">الصفحة الرئيسية</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="destination-section pt-120 mb-120">
+    <div class="container">
+      <div class="row g-lg-4 gy-5 mb-70">
+        {% for destination in destinations %}
+          <div class="col-xl-3 col-lg-4 col-sm-6">
+            <div class="destination-card2">
+              <a href="destination-details.html" class="destination-card-img"><img src="{{destination.image.url}}" alt="" /></a>
+              <div class="batch">
+                <span>5 Tour</span>
+              </div>
+              <div class="destination-card2-content">
+                <span>رحلات الا : </span>
+                <h4><a href="{% url 'tours-by-destination' slug=destination.slug %}">{{destination.name}}</a></h4>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,64 @@
+  <!-- Start Banner section -->
+  <div class="home3-banner-area">
+    <div class="swiper home3-banner-slider">
+      <div class="swiper-wrapper">
+        {% for home_slide in home_slider %}
+        <div class="swiper-slide">
+          <div class="home3-banner-wrapper" style="background-image: linear-gradient(180deg, rgba(34, 34, 34, 0.5) 0%, 
+                        rgba(34, 34, 34, 0.5) 100%), url({{home_slide.backgourndImage.url}});">
+            <div class="home3-banner-content-wrap">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="home3-banner-content">
+                      <div class="eg-tag">
+                        <span>{{home_slide.destination}}</span>
+                      </div>
+                      <h1>
+                        {{home_slide.title}}
+                      </h1>
+                      <div class="banner-content-bottom">
+                        <a href="{% url 'tours-by-destination' slug=home_slide.destination.slug %}" class="primary-btn4">
+                          <span>
+                            Book a Trip<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                              <path d="M7.70294 9.65818L7.27464 11.6673L5.29549 17.0003L6.47016 16.8046L11.9577 9.62856C12.7321 9.6016 13.4832 9.56006 14.1359 9.49563C17.1552 9.19702 16.9986 8.50013 16.9986 8.50013C16.9986 8.50013 17.1552 7.80325 14.1358 7.50464C13.4832 7.43995 12.7321 7.39845 11.9576 7.3717L6.47019 0.195477L5.29549 -5.1162e-07L7.27464 5.33303L7.70294 7.34212C6.69752 7.35717 6.01715 7.38006 6.01715 7.38006C6.01715 7.38006 4.63017 7.41207 2.48417 7.8956L0.734503 5.46859L-8.41624e-05 5.46859L0.523018 8.41949C0.428867 8.44835 0.428867 8.55195 0.523018 8.58081L-8.44274e-05 11.5317L0.734502 11.5317L2.48417 9.10495C4.63017 9.58848 6.01715 9.62001 6.01715 9.62001C6.01715 9.62001 6.69752 9.64317 7.70294 9.65818Z" />
+                              <path d="M11.4004 11.2692L11.4004 12.0613L8.47265 12.0613L8.47265 11.2692L11.4004 11.2692ZM11.4004 4.94234L11.4004 5.73425L8.47282 5.73425L8.47282 4.94234L11.4004 4.94234ZM9.42515 13.9276L9.42515 14.7195L6.71923 14.7195L6.71923 13.9276L9.42515 13.9276ZM9.42515 2.28418L9.42515 3.07634L6.71924 3.07634L6.71924 2.28418L9.42515 2.28418Z" />
+                            </svg>
+                          </span>
+                        </a>
+                        <a data-fancybox="popup-video" href="https://www.youtube.com/watch?v=MLpWrANjFbI&amp;ab_channel=eidelchteinadvogados" class="video-area">
+                          <div class="icon">
+                            <svg class="video-circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="51px" viewBox="0 0 206 206" style="enable-background:new 0 0 206 206;" xml:space="preserve">
+                              <circle class="circle" stroke-miterlimit="10" cx="103" cy="103" r="100"></circle>
+                              <path class="circle-half top-half" stroke-width="4" stroke-miterlimit="10" d="M16.4,53C44,5.2,105.2-11.2,153,16.4s64.2,88.8,36.6,136.6"></path>
+                              <path class="circle-half bottom-half" stroke-width="4" stroke-miterlimit="10" d="M189.6,153C162,200.8,100.8,217.2,53,189.6S-11.2,100.8,16.4,53"></path>
+                            </svg>
+                            <i class="bi bi-play"></i>
+                          </div>
+                          <h6>Watch Tour</h6>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+
+      </div>
+    </div>
+    <div class="slider-btn-grp">
+      <div class="slider-btn home3-banner-prev">
+        <i class="bi bi-arrow-up"></i>
+      </div>
+      <div class="progress-pagination"></div>
+      <div class="slider-btn home3-banner-next">
+        <i class="bi bi-arrow-down"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Banner section -->

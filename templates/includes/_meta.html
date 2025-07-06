@@ -1,0 +1,20 @@
+<title>{% if meta_title %}{{ meta_title }}{% else %}{{ default_meta_title }}{% endif %}</title>
+<meta name="description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ default_meta_description }}{% endif %}">
+<meta name="keywords" content="{% if meta_keywords %}{{ meta_keywords }}{% else %}{{ default_meta_keywords }}{% endif %}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+<meta property="og:title" content="{% if meta_title %}{{ meta_title }}{% else %}{{ default_meta_title }}{% endif %}">
+<meta property="og:description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ default_meta_description }}{% endif %}">
+{% comment %} <meta property="og:image" content="{% if meta_image %}{{ meta_image }}{% else %}{% static 'images/og-default.jpg' %}{% endif %}"> {% endcomment %}
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ request.build_absolute_uri }}">
+<meta property="twitter:title" content="{% if meta_title %}{{ meta_title }}{% else %}{{ default_meta_title }}{% endif %}">
+<meta property="twitter:description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ default_meta_description }}{% endif %}">
+{% comment %} <meta property="twitter:image" content="{% if meta_image %}{{ meta_image }}{% else %}{% static 'images/og-default.jpg' %}{% endif %}"> {% endcomment %}
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ canonical_url|default:request.build_absolute_uri }}">

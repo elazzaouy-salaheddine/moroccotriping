@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'includes/_meta.html' %}
+    
+        <!-- Bootstrap CSS -->
+    <link href="{% static 'assets/css/bootstrap.rtl.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/jquery-ui.css' %}" rel="stylesheet" />
+    <!-- Bootstrap Icon CSS -->
+    <link href="{% static 'assets/css/bootstrap-icons.css' %}" rel="stylesheet" />
+    <!-- Fontawesome all CSS -->
+    <link href="{% static 'assets/css/all.min.css' %}" rel="stylesheet" />
+    <!-- Animate CSS -->
+    <link href="{% static 'assets/css/animate.min.css' %}" rel="stylesheet" />
+    <!-- FancyBox CSS -->
+    <link href="{% static 'assets/css/jquery.fancybox.min.css' %}" rel="stylesheet" />
+
+    <!-- Fontawesome CSS -->
+    <link href="{% static 'assets/css/fontawesome.min.css' %}" rel="stylesheet" />
+    <!-- Swiper slider CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/daterangepicker.css' %}" />
+    <!-- Slick slider CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/slick-theme.css' %}" />
+    <!-- BoxIcon CSS -->
+    <link href="{% static 'assets/css/boxicons.min.css' %}" rel="stylesheet" />
+    <!-- Select2 CSS -->
+    <link href="{% static 'assets/css/select2.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/nice-select.css' %}" rel="stylesheet" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/dashboard.css' %}">
+
+    <!-- Title -->
+    <link rel="stylesheet" href="{% static 'assets/css/style-rtl.css' %}" />
+    <!-- Title -->
+    <title>{{ meta_title }}</title>
+    <link rel="icon" href="{% static 'assets/img/sm-logo.svg' %}" type="image/gif" sizes="20x20" />
+
+</head>
+<body>
+    {% include 'includes/_header.html' %}
+    
+    <main class=" my-5">
+        {% block content %}{% endblock %}
+    </main>
+    
+    {% include 'includes/_footer.html' %}
+    
+  
+</body>
+</html>
